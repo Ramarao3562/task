@@ -19,8 +19,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'scp -r ./build username@yourserver:/path/to/deploy'
-                bat 'ssh username@yourserver "pm2 restart task-tracker"'
+                bat 'scp -r ./build achut@192.168.1.81:/var/www/myapp/'
+                bat 'ssh achut@192.168.1.81 "pm2 restart task-tracker"'
             }
         }
     }
