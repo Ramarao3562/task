@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git url: 'https://github.com/Ramarao3562/task.git', credentialsId: 'github-token'
+               git url: 'https://github.com/Ramarao3562/task.git', branch: 'main', credentialsId: 'github-token'
             }
         }
         stage('Install Dependencies') {
